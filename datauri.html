@@ -1,1 +1,16 @@
-<a href="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTs8L3NjcmlwdD4=">test</a>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Treating data: URIs as unique opaque origins</title>
+</head>
+<body>
+<script type="text/javascript">
+  function foo() {
+    alert("data: URI same origin within including context");
+  }
+</script>
+
+<iframe src="data:text/html,<script>parent.foo();</script>"></iframe>
+</body>
+
+</html>
